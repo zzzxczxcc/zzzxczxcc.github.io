@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="y3e.me" property="og:title">
+    <meta content="y3e.me" property="og:description">
+    <meta content="#36393e" name="theme-color" data-react-helmet="true">
+    <meta content="y3e.me" name="description">
+    <title>y3e.me</title>
+    <script src="https://kit.fontawesome.com/38359ed66d.js" crossorigin="anonymous"></script>
+    <script protect="" src="assets/js/devtool.js.js"></script>
+    <link rel="stylesheet" href="css/land.css">
+    <style>
+      @font-face {
+        font-family: 'MC';
+        src: url('fonts/MC.otf') format('opentype');
+      }
+
+      /* Background video styling */
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+      }
+
+      /* Blur overlay */
+      #video-blur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(8px);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video id="background-video" autoplay muted loop playsinline>
+      <source src="videos/background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="video-blur"></div>
+
+    <div class="blackness" id="blackness">
+      <div class="click-button" onclick="enter(); playMusic()">Click</div>
+    </div>
+
+    <script>
+      function enter() {
+        var overlay = document.getElementById("blackness");
+        overlay.style.display = "none";
+      }
+
+      function playMusic() {
+        var audio = new Audio('audios/lagging.mp3');
+        audio.play();
+      }
+    </script>
+
+    <h1>y3e</h1>
+    <p>zzz</p>
+    <div id="socials">
+      <div class="tooltip">
+        <a href="https://t.me/wirelessfraud" target="_blank">
+          <i class="fa-brands fa-telegram social-icons"></i>
+        </a>
+      </div>
+    </div>
+
+    <div id="clock"></div>
+
+    <script src="js/funny.js"></script>
+    <script src="js/changing.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="js/clock.js"></script>
+  </body>
+</html>
